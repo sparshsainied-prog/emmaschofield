@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Emma.R.Schofield | The Nature of Shadow</title>
+<meta name="description" content="The Nature of Shadow and Anhame, the first two books of a literary high fantasy series of five by Emma.R.Schofield.">
+<meta property="og:title" content="A homepage for Emma.R.Schofield, made by Sparsh Saini">
+<meta property="og:description" content="A homepage idea for Emma.R.Schofield and The Nature of Shadow, made by Sparsh Saini. Not her official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/emmaschofield/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23062029'/><path d='M16 4l4 7h-8zM16 28l-4-7h8zM6 10l8 0-4 7zM26 10l-4 7-4-7zM6 22l4-7 4 7zM26 22h-8l4-7z' fill='%23dfe7ea'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/cover.jpg">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Everything is lifted from The Nature of Shadow cover: the teal night sky full of stars,
+   the silver filigree and six-point stars, the emerald drops, the decorative classical capitals
+   (Cinzel Decorative) and a bookish classical serif to read in (Cormorant Garamond). Book two's ember for Anhame. */
+:root {
+  --night: #06202a;
+  --night-2: #0b3440;
+  --teal: #1f7d8c;
+  --silver: #dfe7ea;
+  --silver-2: #a9bcc3;
+  --emerald: #3fcf9b;
+  --ember: #d5582b;
+  --ember-deep: #5a1a0e;
+  --cap: "Cinzel Decorative", "Cinzel", Georgia, serif;
+  --read: "Cormorant Garamond", Garamond, Georgia, serif;
+  --gutter: clamp(1rem, 5vw, 4rem);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { font-variant-ligatures: none; margin: 0; background: var(--night); color: var(--silver); font-family: var(--read); font-weight: 500; font-size: 1.25rem; line-height: 1.5; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--emerald); outline-offset: 3px; }
+.strip { background: var(--silver); color: var(--night); text-align: center; font-size: 1.02rem; font-weight: 600; padding: .4rem var(--gutter); position: relative; z-index: 30; }
+
+/* ---------- nav: the five books as five six-point stars ---------- */
+.stars { position: fixed; z-index: 40; bottom: 0; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: .2rem; padding: .45rem .8rem .35rem; background: rgba(6, 32, 42, .88); border: 1px solid rgba(223, 231, 234, .35); border-bottom: 0; border-radius: 22px 22px 0 0; }
+.stars a { display: grid; place-items: center; width: 34px; height: 34px; text-decoration: none; }
+.stars svg { width: 22px; height: 22px; }
+.stars .lit path { fill: var(--silver); }
+.stars .dim path { fill: none; stroke: var(--silver-2); stroke-width: 1.2; }
+.stars .word { width: auto; padding: 0 .5rem; font-family: var(--cap); font-size: .9rem; font-weight: 700; letter-spacing: .04em; }
+.stars .sep { width: 1px; height: 22px; background: rgba(223, 231, 234, .35); margin: 0 .25rem; }
+.tip { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 6px; white-space: nowrap; font-family: var(--cap); font-size: .85rem; background: var(--silver); color: var(--night); padding: .2rem .6rem; border-radius: 12px; opacity: 0; pointer-events: none; transition: opacity .15s; }
+.stars a:hover .tip, .stars a:focus-visible .tip { opacity: 1; }
+.stars a { position: relative; }
+
+/* ---------- hero: the eclipse over the window ---------- */
+.hero { position: relative; height: 300vh; }
+.stage { --bw: min(calc(100vw - 2 * var(--gutter)), calc((100svh - 340px) * .625)); position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: var(--night) url(img/sky.jpg) 0 0 / 160px 160px repeat; }
+.stage::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6, 32, 42, .3), rgba(6, 32, 42, .9) 70%); pointer-events: none; }
+.bookwrap { position: absolute; left: 50%; top: 16px; width: var(--bw); aspect-ratio: 1000 / 1600; transform: translateX(-50%); z-index: 2; }
+.book { position: absolute; inset: 0; background: url(img/cover.jpg) center / 100% 100% no-repeat; box-shadow: 0 0 0 1px rgba(223, 231, 234, .25), 0 22px 50px rgba(0, 0, 0, .55); will-change: transform; }
+.window { position: absolute; left: 25.6%; top: 38.2%; width: 48.6%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; }
+.window img { position: absolute; display: block; max-width: none; will-change: transform; }
+.window .scene { inset: 0; width: 100%; height: 100%; transform-origin: 50% 62%; }
+.window .shade { left: -4.1%; top: -4.1%; width: 108.2%; height: 108.2%; }
+.words { position: absolute; z-index: 3; left: var(--gutter); right: var(--gutter); top: calc(16px + var(--bw) * 1.6 + 14px); text-align: center; }
+.words h1 { font-family: var(--cap); font-weight: 700; font-size: 1.02rem; letter-spacing: .03em; color: var(--emerald); margin: 0 0 .35rem; }
+.words .line { font-size: clamp(1.25rem, 5.2vw, 1.5rem); line-height: 1.28; margin: 0 auto .9rem; max-width: 30rem; }
+.words .line i { font-style: italic; color: #fff; }
+.btns { display: flex; flex-wrap: wrap; gap: .7rem 1.2rem; align-items: center; justify-content: center; }
+.btn { position: relative; display: inline-block; text-decoration: none; font-family: var(--cap); font-weight: 700; font-size: 1.02rem; letter-spacing: .04em; color: var(--night); background: linear-gradient(180deg, #f4f8f9, #b8c7cc); padding: .62rem 1.5rem .55rem; border-radius: 999px; box-shadow: 0 0 0 1px #fff inset, 0 0 0 3px var(--night), 0 0 0 4px var(--silver-2); }
+.btn::before, .btn::after { content: "\2736"; position: absolute; top: 50%; transform: translateY(-50%); font-size: .7rem; color: var(--night); }
+.btn::before { left: .55rem; } .btn::after { right: .55rem; }
+.btn:hover { background: linear-gradient(180deg, #fff, #cfe0e4); }
+.btn.em { background: linear-gradient(180deg, #ffb48f, #d5582b); }
+.link { text-decoration: underline; text-decoration-color: var(--emerald); text-decoration-thickness: 1px; text-underline-offset: 5px; font-weight: 600; }
+@media (min-width: 900px) {
+  .stage { --bw: min(calc((100svh - 130px) * .625), 34vw); }
+  .bookwrap { top: calc(50% - 10px); transform: translate(-50%, -50%); }
+  .words { top: 50%; transform: translateY(-50%); left: 5vw; right: auto; width: calc(50vw - var(--bw) / 2 - 9vw); text-align: left; }
+  .words .line { font-size: clamp(1.6rem, 2.2vw, 2.2rem); margin: 0 0 1.4rem; }
+  .words h1 { font-size: 1.25rem; }
+  .btns { justify-content: flex-start; }
+  .side { position: absolute; z-index: 3; top: 50%; transform: translateY(-50%); right: 5vw; width: calc(50vw - var(--bw) / 2 - 9vw); font-size: 1.3rem; }
+}
+.side { display: none; }
+@media (min-width: 900px) { .side { display: block; } }
+.side dl { margin: 0; }
+.side dt { font-family: var(--cap); font-weight: 700; font-size: 1rem; color: var(--emerald); letter-spacing: .04em; margin-top: 1rem; }
+.side dd { margin: .1rem 0 0; }
+
+/* ---------- sections ---------- */
+.sec { padding: clamp(3.5rem, 9vw, 7rem) var(--gutter); position: relative; }
+.in { max-width: 1100px; margin: 0 auto; }
+h2 { font-family: var(--cap); font-weight: 700; font-size: clamp(2.1rem, 8vw, 4rem); line-height: 1.08; margin: 0 0 1.3rem; color: #fff; }
+h3 { font-family: var(--cap); font-weight: 700; font-size: 1.4rem; margin: 0 0 .4rem; }
+p { margin: 0 0 1rem; max-width: 36rem; }
+.orn { display: block; width: 180px; height: 22px; margin: 0 0 1.2rem; }
+.two { display: grid; gap: 2.4rem; align-items: center; }
+@media (max-width: 859px) { #shadow .cover { display: none; } }
+@media (min-width: 860px) { .two { grid-template-columns: 5fr 7fr; gap: 4.5rem; } .two.flip > :first-child { order: 2; } }
+.cover { width: min(320px, 76vw); box-shadow: 0 0 0 1px rgba(223, 231, 234, .3), 0 20px 40px rgba(0, 0, 0, .5); }
+.facts { list-style: none; padding: 0; margin: 0 0 1.4rem; display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; color: var(--silver-2); font-size: 1.1rem; }
+.facts li::before { content: "\2736  "; color: var(--emerald); }
+.praise { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1rem; }
+.praise li { font-style: italic; font-size: 1.3rem; }
+.praise b { font-style: normal; font-weight: 600; font-size: 1rem; color: var(--silver-2); margin-left: .4rem; }
+
+.anhame { background: radial-gradient(120% 90% at 70% 40%, #7a2a13 0%, #3a1009 55%, #1a0705 100%); }
+.anhame h2 { color: #ffd8c4; }
+.anhame .facts li::before { color: #ffb48f; }
+
+.quintet ol { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 0; counter-reset: q; }
+.quintet li { display: grid; grid-template-columns: 54px 1fr; gap: 1rem; align-items: center; padding: 1rem 0; border-top: 1px solid rgba(223, 231, 234, .2); }
+.quintet li:last-child { border-bottom: 1px solid rgba(223, 231, 234, .2); }
+.quintet svg { width: 40px; height: 40px; }
+.quintet .lit { fill: var(--silver); }
+.quintet .dim { fill: none; stroke: var(--silver-2); stroke-width: 1; }
+.quintet h3 { margin: 0; font-size: clamp(1.3rem, 4.6vw, 1.9rem); }
+.quintet .st { color: var(--silver-2); font-size: 1.05rem; }
+@media (min-width: 860px) { .quintet ol { grid-template-columns: repeat(5, 1fr); } .quintet li { grid-template-columns: 1fr; text-align: center; justify-items: center; border: 0; border-left: 1px solid rgba(223, 231, 234, .2); padding: 1rem .8rem; } .quintet li:last-child { border-bottom: 0; border-right: 1px solid rgba(223, 231, 234, .2); } }
+
+.fair { background: var(--night-2); }
+.fair .tbl { font-family: var(--cap); font-weight: 700; font-size: clamp(5rem, 24vw, 10rem); line-height: .9; color: #fff; margin: .2rem 0 .8rem; }
+.fair .when { font-family: var(--cap); font-weight: 700; color: var(--emerald); font-size: 1.15rem; }
+
+.emma p { font-size: 1.35rem; }
+
+.copy { background: var(--silver); color: var(--night); text-align: center; }
+.copy h2 { color: var(--night); }
+.copy p { margin-left: auto; margin-right: auto; }
+.copy .btn { background: var(--night); color: var(--silver); box-shadow: 0 0 0 1px var(--silver-2) inset, 0 0 0 3px var(--silver), 0 0 0 4px var(--night); }
+.copy .btn::before, .copy .btn::after { color: var(--emerald); }
+.copy .link { text-decoration-color: var(--teal); }
+.copy .orn { margin-left: auto; margin-right: auto; }
+footer { background: var(--night); color: var(--silver-2); text-align: center; padding: 1.4rem var(--gutter) 4.6rem; font-size: 1.05rem; }
+
+/* no JavaScript or reduced motion: the window open, no pin */
+html:not(.js) .hero, html.still .hero { height: auto; }
+html:not(.js) .stage, html.still .stage { position: relative; height: auto; padding: 16px 0 2.2rem; }
+html:not(.js) .bookwrap, html.still .bookwrap { position: relative; left: auto; top: auto; transform: none; margin: 0 auto; }
+html:not(.js) .shade, html.still .shade { display: none; }
+html:not(.js) .words, html.still .words { position: relative; left: auto; right: auto; top: auto; transform: none; width: auto; padding: 1.4rem var(--gutter) 0; }
+@media (min-width: 900px) {
+  html:not(.js) .stage, html.still .stage { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 4vw; padding: 80px 5vw 3rem; }
+  html:not(.js) .words, html.still .words { order: -1; padding: 0; }
+  html:not(.js) .side, html.still .side { position: relative; top: auto; right: auto; transform: none; width: auto; }
+}
+</style>
+</head>
+<body>
+<div class="strip">A homepage idea made by Sparsh Saini for Emma.R.Schofield. Not their official site.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><path id="star" d="M12 1.5l3.1 5.4h6.2l-3.1 5.1 3.1 5.1h-6.2L12 22.5l-3.1-5.4H2.7l3.1-5.1-3.1-5.1h6.2z"/></defs></svg>
+<nav class="stars" aria-label="The five books and the page">
+  <a href="#shadow" class="lit"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.1 5.4h6.2l-3.1 5.1 3.1 5.1h-6.2L12 22.5l-3.1-5.4H2.7l3.1-5.1-3.1-5.1h6.2z"/></svg><span class="tip">1 The Nature of Shadow</span></a>
+  <a href="#anhame" class="lit"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.1 5.4h6.2l-3.1 5.1 3.1 5.1h-6.2L12 22.5l-3.1-5.4H2.7l3.1-5.1-3.1-5.1h6.2z"/></svg><span class="tip">2 Anhame</span></a>
+  <a href="#quintet" class="dim"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.1 5.4h6.2l-3.1 5.1 3.1 5.1h-6.2L12 22.5l-3.1-5.4H2.7l3.1-5.1-3.1-5.1h6.2z"/></svg><span class="tip">3 Trials, coming</span></a>
+  <a href="#quintet" class="dim"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.1 5.4h6.2l-3.1 5.1 3.1 5.1h-6.2L12 22.5l-3.1-5.4H2.7l3.1-5.1-3.1-5.1h6.2z"/></svg><span class="tip">4 Carlan, coming</span></a>
+  <a href="#quintet" class="dim"><svg viewBox="0 0 24 24"><path d="M12 1.5l3.1 5.4h6.2l-3.1 5.1 3.1 5.1h-6.2L12 22.5l-3.1-5.4H2.7l3.1-5.1-3.1-5.1h6.2z"/></svg><span class="tip">5 Darkmage, coming</span></a>
+  <span class="sep" aria-hidden="true"></span>
+  <a href="#fair" class="word">Fair</a>
+  <a href="#emma" class="word">Emma</a>
+</nav>
+
+<main>
+<section class="hero" id="top" aria-label="The Nature of Shadow cover, its window in shadow until you scroll">
+  <div class="stage">
+    <div class="bookwrap">
+      <div class="book" role="img" aria-label="The cover of The Nature of Shadow by Emma.R.Schofield: a silver filigree frame with six-point stars on a teal night sky, and in its round window a white castle under two crescent moons.">
+        <div class="window"><img class="scene" src="img/scene.jpg" alt="" width="486" height="486"><img class="shade" src="img/shadow.webp" alt="" width="526" height="526"></div>
+      </div>
+    </div>
+    <div class="words">
+      <h1>The Nature of Shadow, by Emma.R.Schofield</h1>
+      <p class="line">To be allowed to pass through the trials, <i>she must somehow conceal the darkness that is her nature.</i></p>
+      <div class="btns"><a class="btn" href="https://books2read.com/the-nature-of-shadow/">Find the book</a><a class="link" href="#fair">Table N68, Oxford</a></div>
+    </div>
+    <aside class="side" aria-label="About the book">
+      <dl>
+        <dt>Book one of five</dt><dd>A literary high fantasy series</dd>
+        <dt>For</dt><dd>People who love myth and magic, dragons and sword bearers</dd>
+        <dt>Suitable</dt><dd>From young adult to long-retired elder</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="sec" id="shadow">
+  <div class="in two">
+    <img class="cover" src="img/shadow-sm.jpg" alt="The cover of The Nature of Shadow." width="560" height="896">
+    <div>
+      <svg class="orn" viewBox="0 0 180 22" aria-hidden="true"><path d="M2 11h68M110 11h68" stroke="#a9bcc3" stroke-width="1"/><use href="#star" x="78" y="-1" width="24" height="24" fill="#dfe7ea"/></svg>
+      <h2>Will she be cast out of the one place she has left to go?</h2>
+      <p>Anhame, the Hall under the six point star, is the only place Lia can learn how to use her terrifying powers. But to take the oath, and to pass through the trials, she must conceal the darkness that is her nature.</p>
+      <p>How long can she hide her dark secret from the Masters of her craft? And if they find out, what will they do to ensure she is not a danger to everyone around her?</p>
+      <ul class="facts"><li>Out March 2026</li><li>359 pages</li><li>Low on sex and violence, rich in world-building</li></ul>
+      <div class="btns" style="justify-content:flex-start"><a class="btn" href="https://books2read.com/the-nature-of-shadow/">All stores</a><a class="link" href="https://www.goodreads.com/book/show/247025939-the-nature-of-shadow">On Goodreads</a></div>
+      <ul class="praise">
+        <li>"A captivating tale woven with a unique magic system"<b>Sam Fisher</b></li>
+        <li>"This is a book to lose yourself in"<b>Marge Ryan</b></li>
+        <li>"You'll want to follow Lia through all her adventures at Anhame and beyond."<b>Robbin Price</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec anhame" id="anhame">
+  <div class="in two flip">
+    <img class="cover" src="img/anhame.jpg" alt="The cover of Anhame: the same silver frame on an ember-red sky, and in its window a fox-like creature in a burning forest." width="560" height="896" loading="lazy">
+    <div>
+      <h2>Will she survive the trials?</h2>
+      <p>The only way that Lia's powers will reach their full potential is if she passes through the trials. What will Fate place in her path to test her higher senses to their limits?</p>
+      <p>And has she learned enough, is she powerful enough, to escape the terrifying deaths that claim those who fail?</p>
+      <ul class="facts"><li>Book two</li><li>Coming soon, with luck in time for the fair</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec quintet" id="quintet">
+  <div class="in">
+    <h2>A series of five</h2>
+    <p>Myth and magic, dragons and sword-fighting, and a frighteningly powerful protagonist who nevertheless faces entirely human struggles.</p>
+    <ol>
+      <li><svg viewBox="0 0 24 24" class="lit"><use href="#star"/></svg><div><h3>The Nature of Shadow</h3><span class="st">Book one, out now</span></div></li>
+      <li><svg viewBox="0 0 24 24" class="lit"><use href="#star"/></svg><div><h3>Anhame</h3><span class="st">Book two, coming soon</span></div></li>
+      <li><svg viewBox="0 0 24 24" class="dim"><use href="#star"/></svg><div><h3>Trials</h3><span class="st">Book three</span></div></li>
+      <li><svg viewBox="0 0 24 24" class="dim"><use href="#star"/></svg><div><h3>Carlan</h3><span class="st">Book four</span></div></li>
+      <li><svg viewBox="0 0 24 24" class="dim"><use href="#star"/></svg><div><h3>Darkmage</h3><span class="st">Book five</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec fair" id="fair">
+  <div class="in two">
+    <div>
+      <p class="when">Oxford Indie Book Fair, Sunday 22 November 2026</p>
+      <p class="tbl">N68</p>
+    </div>
+    <div>
+      <p>Come and find The Nature of Shadow on my table, and Anhame too, fingers crossed. Say hello, and ask me anything about Lia and the Hall under the six point star.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec emma" id="emma">
+  <div class="in">
+    <h2>Hello, I'm Emma</h2>
+    <p>I'm a British fantasy writer. The Nature of Shadow, my debut, came out in March 2026, and it is the first of five. I'm writing the rest of the series now.</p>
+    <p>I'm also a parent, and an LGBTQ+ ally.</p>
+    <a class="link" href="https://www.instagram.com/sffstoryteller/">@sffstoryteller</a>
+  </div>
+</section>
+
+<section class="sec copy" id="copy">
+  <div class="in">
+    <svg class="orn" viewBox="0 0 180 22" aria-hidden="true"><path d="M2 11h68M110 11h68" stroke="#1f7d8c" stroke-width="1"/><use href="#star" x="78" y="-1" width="24" height="24" fill="#06202a"/></svg>
+    <h2>A copy made for you</h2>
+    <p>Ask for your book with a foiled cover, or with a personal message from me inside. Tell me what you'd like and I'll make it.</p>
+    <div class="btns"><a class="btn" href="https://forms.office.com/e/x12NW28PEm">Ask for your copy</a></div>
+    <p style="margin-top:1.6rem">Or unlock a world of secrets, shadows and magic: <a class="link" href="https://emmarschofield.com/">get a free chapter by email</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer>A mockup made by Sparsh Saini for Emma.R.Schofield. Not affiliated, not live.</footer>
+
+<script>
+(() => {
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  const hero = document.querySelector('.hero'), win = document.querySelector('.window');
+  const book = document.querySelector('.book'), scene = document.querySelector('.scene'), shade = document.querySelector('.shade');
+  const clamp = v => v < 0 ? 0 : v > 1 ? 1 : v;
+  const ease = t => t * t * (3 - 2 * t);
+  let w = 1, top = 0, run = 1, ticking = false, lastP = -1;
+  function measure() { w = win.getBoundingClientRect().width; top = hero.getBoundingClientRect().top + scrollY; run = Math.max(1, hero.offsetHeight - innerHeight); }
+  function draw(p) {
+    // 1. the window is in eclipse, 2. the shadow slides off up and to the right, a crescent first,
+    // 3. the castle sits deeper than the silver frame as the cover settles toward you
+    const e = ease(clamp((p - .06) / .5));
+    shade.style.transform = `translate3d(${(e * 1.12 * w).toFixed(1)}px,${(-e * .8 * w).toFixed(1)}px,0)`;
+    const d = ease(clamp((p - .3) / .6));
+    scene.style.transform = `scale(${(1.2 - .2 * d).toFixed(4)}) translate3d(0,${((1 - d) * .04 * w).toFixed(1)}px,0)`;
+    book.style.transform = `scale(${(.94 + .06 * ease(clamp((p - .4) / .5))).toFixed(4)})`;
+  }
+  function frame() { ticking = false; const p = still.matches ? 1 : clamp((scrollY - top) / run); if (Math.abs(p - lastP) < .0004) return; lastP = p; draw(p); }
+  function setMode() { document.documentElement.classList.toggle('still', still.matches); measure(); lastP = -1; frame(); }
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+  addEventListener('resize', () => { measure(); lastP = -1; frame(); });
+  still.addEventListener('change', setMode);
+  setMode();
+})();
+</script>
+</body>
+</html>
